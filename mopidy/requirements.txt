@@ -1,0 +1,5 @@
+mopidy==3.4.2
+mopidy-mpd==3.3.0
+mopidy-local==3.3.0
+mopidy-scrobbler==2.0.1
+# Maybe add UI here somewhere
