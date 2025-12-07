@@ -54,7 +54,7 @@ jobs:
         with:
           push: true
           context: ./mopidy
-          file: ./Dockerfile
+          file: ./mopidy/Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           
