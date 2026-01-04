@@ -16,11 +16,11 @@ RUN apt install -y \
     gstreamer1.0-plugins-ugly \
     gstreamer1.0-tools      
 
-COPY requirements.txt .
+COPY requirements.txt entrypoint.sh ./
 RUN pip3 install -r requirements.txt
 
 VOLUME [ "/config" , "/data"  ]
 EXPOSE 6600
 
 ENTRYPOINT ["./entrypoint.sh"]
-CMD ["mopidy", "--config", "/config/config.toml" ]
+CMD ["mopidy", "--config", "/config/mopidy.conf" ]
