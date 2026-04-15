@@ -1,0 +1,17 @@
+name: lint Containerfiles
+on:
+  - pull_request
+  - push
+jobs:
+  lint:
+    strategy:
+      matrix:
+        value: [
+          "curl-yq"
+        ]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hadolint/hadolint-action@v2.0.0
+        with:
+          dockerfile: ${{ matrix.value}}/Containerfile
